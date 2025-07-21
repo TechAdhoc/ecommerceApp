@@ -133,6 +133,7 @@ app/
 ## Getting Started
 
 Instructions for setting up and running the project locally...
+Clone the project, open with Android studio and run the app
 
 ## Contributing
 
