@@ -6,7 +6,7 @@ This ECommerce application is built following modern Android development practic
 
 ## Atomic Design System
 
-The UI components are structured according to the Atomic Design methodology, which provides a clear hierarchy for organizing UI elements:
+The UI components are structured according to the Atomic Design methodology, which provides a clear hierarchy for organizing UI elements using jetpack compose:
 
 ### Atoms
 Atoms are the smallest building blocks of the interface:
@@ -50,7 +50,7 @@ Pages are specific instances of templates with real content:
 The application follows Clean Architecture principles with clear separation of concerns:
 
 ### Presentation Layer
-- **View**: Activities, Fragments, Composables
+- **View**: Activity, Composables
 - **ViewModel**: Manages UI state and business logic
 - **UI State**: Immutable data classes representing the UI state
 
