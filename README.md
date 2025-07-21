@@ -135,10 +135,3 @@ app/
 Instructions for setting up and running the project locally...
 Clone the project, open with Android studio and run the app
 
-## Contributing
-
-Guidelines for contributing to the project...
-
-## License
-
-License information...
