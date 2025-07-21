@@ -5,7 +5,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.ecommerceapp.design.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Alert dialog component for displaying API errors

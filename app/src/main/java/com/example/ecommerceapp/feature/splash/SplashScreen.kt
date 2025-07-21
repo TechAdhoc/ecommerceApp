@@ -25,11 +25,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import android.R
 import androidx.compose.material3.Text
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.theme.Dimensions
-import com.example.ecommerceapp.designsystem.theme.Primary
+import com.example.ecommerceapp.core.designsystem.theme.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Primary
 import com.example.ecommerceapp.feature.auth.viewmodel.AuthViewModel
 import kotlinx.coroutines.delay
 

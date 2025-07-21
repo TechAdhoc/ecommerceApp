@@ -2,12 +2,11 @@ package com.example.ecommerceapp.core.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import com.example.ecommerceapp.designsystem.molecules.AppAlertDialog
-import com.example.ecommerceapp.designsystem.molecules.AppProgressDialog
+import com.example.ecommerceapp.core.designsystem.molecules.AppAlertDialog
+import com.example.ecommerceapp.core.designsystem.molecules.AppProgressDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow

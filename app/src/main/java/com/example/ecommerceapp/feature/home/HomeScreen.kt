@@ -27,7 +27,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -37,24 +36,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.ecommerceapp.core.components.AppTopBar
 import com.example.ecommerceapp.core.components.ErrorDialog
 import com.example.ecommerceapp.core.components.ErrorState
 import com.example.ecommerceapp.core.components.NetworkErrorScreen
-import com.example.ecommerceapp.core.components.Loader
 import com.example.ecommerceapp.core.network.ApiResult
 import com.example.ecommerceapp.core.network.NetworkConnectivityManager
 import com.example.ecommerceapp.core.network.observeConnectivityAsState
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.TitleLarge
-import com.example.ecommerceapp.designsystem.atoms.BodyLarge
-import com.example.ecommerceapp.designsystem.organisms.BottomNavItem
-import com.example.ecommerceapp.designsystem.organisms.BottomNavigationBar
-import com.example.ecommerceapp.designsystem.organisms.ProductCarousel
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.BodyLarge
+import com.example.ecommerceapp.core.designsystem.organisms.BottomNavItem
+import com.example.ecommerceapp.core.designsystem.organisms.BottomNavigationBar
+import com.example.ecommerceapp.core.designsystem.organisms.ProductCarousel
 import com.example.ecommerceapp.feature.home.viewmodel.HomeViewModel
 import com.example.ecommerceapp.navigation.Screen
 

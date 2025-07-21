@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.theme
+package com.example.ecommerceapp.core.designsystem.theme
 
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CutCornerShape

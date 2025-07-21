@@ -1,7 +1,6 @@
 package com.example.ecommerceapp.feature.auth
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -16,15 +15,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.ecommerceapp.core.components.Loader
 import com.example.ecommerceapp.core.network.ApiResult
-import com.example.ecommerceapp.designsystem.atoms.TitleLarge
-import com.example.ecommerceapp.designsystem.organisms.LoginForm
-import com.example.ecommerceapp.designsystem.templates.CenteredFormTemplate
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.TitleLarge
+import com.example.ecommerceapp.core.designsystem.organisms.LoginForm
+import com.example.ecommerceapp.core.designsystem.templates.CenteredFormTemplate
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
 import com.example.ecommerceapp.feature.auth.viewmodel.AuthViewModel
 import kotlinx.coroutines.flow.collectLatest
 
@@ -100,7 +98,7 @@ fun LoginScreen(
             ) {
                 TitleLarge(
                     text = "Welcome to ECommerce",
-                    color = androidx.compose.ui.graphics.Color.White
+                    color = Color.White
                 )
             }
             

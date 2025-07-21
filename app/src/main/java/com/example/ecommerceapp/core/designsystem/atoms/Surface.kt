@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.atoms
+package com.example.ecommerceapp.core.designsystem.atoms
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.ecommerceapp.design.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Divider atom used to create horizontal separators

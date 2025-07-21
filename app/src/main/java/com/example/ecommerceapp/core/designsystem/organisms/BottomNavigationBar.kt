@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.organisms
+package com.example.ecommerceapp.core.designsystem.organisms
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.Icon
@@ -19,7 +19,7 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.ecommerceapp.design.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Data class to define items in the bottom navigation bar

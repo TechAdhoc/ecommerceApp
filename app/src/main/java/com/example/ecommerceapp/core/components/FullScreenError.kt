@@ -18,8 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.ecommerceapp.R
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommerceSurface
+import com.example.ecommerceapp.core.designsystem.theme.Theme
+import com.example.ecommerceapp.core.designsystem.atoms.EcommerceSurface
 
 /**
  * Full screen error component that displays different error states

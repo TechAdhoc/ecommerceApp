@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.atoms
+package com.example.ecommerceapp.core.designsystem.atoms
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -13,8 +13,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.Dp
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Standard icon component with consistent styling

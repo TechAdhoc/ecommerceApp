@@ -17,7 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import com.example.ecommerceapp.design.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Reusable Error Dialog component to display API errors

@@ -1,6 +1,5 @@
-package com.example.ecommerceapp.designsystem.templates
+package com.example.ecommerceapp.core.designsystem.templates
 
-import android.content.res.Resources
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,13 +17,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommerceSurface
-import com.example.ecommerceapp.designsystem.theme.Dimensions
-import com.example.ecommerceapp.designsystem.theme.Primary
-import com.example.ecommerceapp.designsystem.theme.PrimaryDark
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Primary
+import com.example.ecommerceapp.core.designsystem.theme.PrimaryDark
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Centered form template for authentication screens
@@ -73,7 +70,7 @@ fun BottomSheetTemplate(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        color = Theme.colorScheme.surface,
+        color = Theme.surface,
         shape = RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp),
         shadowElevation = 8.dp
     ) {
@@ -88,13 +85,13 @@ fun BottomSheetTemplate(
                     .height(4.dp)
                     .width(40.dp)
                     .background(
-                        color = Theme.colorScheme.onSurface.copy(alpha = 0.2f),
+                        color = Theme.onSurface.copy(alpha = 0.2f),
                         shape = RoundedCornerShape(2.dp)
                     )
                     .align(Alignment.CenterHorizontally)
             )
             
-            Spacer(modifier = Modifier.height(Dimensions.spacing_24))
+            Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_24))
             
             // Sheet content
             content()

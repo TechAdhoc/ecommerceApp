@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.molecules
+package com.example.ecommerceapp.core.designsystem.molecules
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -19,11 +19,11 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.Caption
-import com.example.ecommerceapp.designsystem.atoms.EcommercePrimaryButton
-import com.example.ecommerceapp.designsystem.atoms.TitleMedium
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.Caption
+import com.example.ecommerceapp.core.designsystem.atoms.EcommercePrimaryButton
+import com.example.ecommerceapp.core.designsystem.atoms.TitleMedium
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 import kotlin.math.ceil
 import kotlin.math.floor
 
@@ -73,7 +73,7 @@ fun ProductItemCard(
                     overflow = TextOverflow.Ellipsis
                 )
                 
-                Spacer(modifier = Modifier.height(Dimensions.spacing_8))
+                Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_8))
                 
                 // Price
                 Row(
@@ -82,31 +82,31 @@ fun ProductItemCard(
                     if (discountPrice != null) {
                         Text(
                             text = "$${String.format("%.2f", discountPrice)}",
-                            style = Theme.typography.bodySmall,
-                            color = Theme.colorScheme.primary,
+                            style = Theme.bodySmall,
+                            color = Theme.primary,
                             fontWeight = FontWeight.Bold
                         )
                         
-                        Spacer(modifier = Modifier.width(Dimensions.spacing_8))
+                        Spacer(modifier = Modifier.Companion.width(Dimensions.spacing_8))
                         
                         Text(
                             text = "$${String.format("%.2f", price)}",
-                            style = Theme.typography.bodySmall,
-                            color = Theme.colorScheme.onSurface.copy(alpha = 0.6f),
+                            style = Theme.bodySmall,
+                            color = Theme.onSurface.copy(alpha = 0.6f),
                             textDecoration = TextDecoration.LineThrough
                         )
                     } else {
                         Text(
                             text = "$${String.format("%.2f", price)}",
-                            style = Theme.typography.titleMedium,
-                            color = Theme.colorScheme.primary,
+                            style = Theme.titleMedium,
+                            color = Theme.primary,
                             fontWeight = FontWeight.Bold
                         )
                     }
                 }
                 
                 if (rating != null) {
-                    Spacer(modifier = Modifier.height(Dimensions.spacing_8))
+                    Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_8))
                     
                     // Rating
                     Row(
@@ -118,13 +118,13 @@ fun ProductItemCard(
                         )
                         
                         if (reviews != null) {
-                            Spacer(modifier = Modifier.width(Dimensions.spacing_4))
+                            Spacer(modifier = Modifier.Companion.width(Dimensions.spacing_4))
                             Caption(text = "($reviews)")
                         }
                     }
                 }
                 
-                Spacer(modifier = Modifier.height(Dimensions.spacing_12))
+                Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_12))
 
                 EcommercePrimaryButton(
                     onClick = onAddToCartClick

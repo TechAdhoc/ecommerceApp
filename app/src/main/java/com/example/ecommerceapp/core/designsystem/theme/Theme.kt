@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.design
+package com.example.ecommerceapp.core.designsystem.theme
 
 import android.app.Activity
 import android.os.Build
@@ -100,76 +100,26 @@ object Theme {
                 controller.isAppearanceLightStatusBars = !darkTheme
                 controller.isAppearanceLightNavigationBars = !darkTheme
 
-                window.setDecorFitsSystemWindows(false)
-                WindowCompat.getInsetsController(window, view).apply {
-                    isAppearanceLightStatusBars = !darkTheme
-
-                    window.statusBarColor = Color.Transparent.toArgb()
-                }
+                // Set status bar color
+                window.statusBarColor = colorScheme.primary.toArgb()
             }
         }
 
         CompositionLocalProvider(LocalAppColorScheme provides colorScheme) {
             MaterialTheme(
                 colorScheme = colorScheme,
-                typography = MaterialTheme.typography,
+                typography = AppTypography,
                 content = content
             )
         }
     }
 
-    /**
-     * Typography styles for the application
-     */
-    val typography: Typography
-        @Composable
-        get() = MaterialTheme.typography
-
-    /**
-     * Color scheme for the application
-     */
-    val colorScheme: ColorScheme
+    // Access to the current color scheme
+    private val colorScheme: ColorScheme
         @Composable
         get() = LocalAppColorScheme.current
 
-    // Typography convenience accessors
-    val headlineLarge: TextStyle
-        @Composable
-        get() = typography.headlineLarge
-
-    val headlineMedium: TextStyle
-        @Composable
-        get() = typography.headlineMedium
-
-    val headlineSmall: TextStyle
-        @Composable
-        get() = typography.headlineSmall
-
-    val titleLarge: TextStyle
-        @Composable
-        get() = typography.titleLarge
-
-    val titleMedium: TextStyle
-        @Composable
-        get() = typography.titleMedium
-
-    val titleSmall: TextStyle
-        @Composable
-        get() = typography.titleSmall
-
-    val bodyLarge: TextStyle
-        @Composable
-        get() = typography.bodyLarge
-
-    val bodyMedium: TextStyle
-        @Composable
-        get() = typography.bodyMedium
-
-    val bodySmall: TextStyle
-        @Composable
-        get() = typography.bodySmall
-
-    // Color convenience accessors
+    // Colors
     val primary: Color
         @Composable
         get() = colorScheme.primary
@@ -202,13 +152,21 @@ object Theme {
         @Composable
         get() = colorScheme.onSecondaryContainer
 
-    val surface: Color
+    val tertiary: Color
         @Composable
-        get() = colorScheme.surface
+        get() = colorScheme.tertiary
 
-    val onSurface: Color
+    val onTertiary: Color
         @Composable
-        get() = colorScheme.onSurface
+        get() = colorScheme.onTertiary
+
+    val error: Color
+        @Composable
+        get() = colorScheme.error
+
+    val onError: Color
+        @Composable
+        get() = colorScheme.onError
 
     val background: Color
         @Composable
@@ -218,11 +176,82 @@ object Theme {
         @Composable
         get() = colorScheme.onBackground
 
-    val error: Color
+    val surface: Color
         @Composable
-        get() = colorScheme.error
+        get() = colorScheme.surface
 
-    val onError: Color
+    val onSurface: Color
         @Composable
-        get() = colorScheme.onError
+        get() = colorScheme.onSurface
+
+    val surfaceVariant: Color
+        @Composable
+        get() = colorScheme.surfaceVariant
+
+    val onSurfaceVariant: Color
+        @Composable
+        get() = colorScheme.onSurfaceVariant
+
+    // Typography
+    private val AppTypography = Typography()
+
+    val displayLarge: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.displayLarge
+
+    val displayMedium: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.displayMedium
+
+    val displaySmall: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.displaySmall
+
+    val headlineLarge: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.headlineLarge
+
+    val headlineMedium: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.headlineMedium
+
+    val headlineSmall: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.headlineSmall
+
+    val titleLarge: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.titleLarge
+
+    val titleMedium: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.titleMedium
+
+    val titleSmall: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.titleSmall
+
+    val bodyLarge: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.bodyLarge
+
+    val bodyMedium: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.bodyMedium
+
+    val bodySmall: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.bodySmall
+
+    val labelLarge: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.labelLarge
+
+    val labelMedium: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.labelMedium
+
+    val labelSmall: TextStyle
+        @Composable
+        get() = MaterialTheme.typography.labelSmall
 }

@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.theme
+package com.example.ecommerceapp.core.designsystem.theme
 
 import androidx.compose.ui.unit.dp
 
@@ -25,19 +25,19 @@ object Dimensions {
     // Component specific
     val button_height = 48.dp
     val button_corner_radius = 8.dp
-    
+
     val card_elevation = 4.dp
     val card_corner_radius = 8.dp
-    
+
     val input_height = 56.dp
     val input_corner_radius = 8.dp
-    
+
     val icon_size_small = 16.dp
     val icon_size_medium = 24.dp
     val icon_size_large = 32.dp
-    
+
     val divider_height = 1.dp
-    
+
     // Screen specific
     val appbar_height = 56.dp
     val bottombar_height = 56.dp

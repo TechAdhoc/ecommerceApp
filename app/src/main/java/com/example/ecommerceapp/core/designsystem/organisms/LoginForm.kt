@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.organisms
+package com.example.ecommerceapp.core.designsystem.organisms
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -26,15 +26,15 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommerceIconButton
-import com.example.ecommerceapp.designsystem.atoms.EcommercePrimaryButton
-import com.example.ecommerceapp.designsystem.atoms.EcommerceTextButton
-import com.example.ecommerceapp.designsystem.atoms.TitleLarge
-import com.example.ecommerceapp.designsystem.molecules.FormField
-import com.example.ecommerceapp.designsystem.molecules.InfoBanner
-import com.example.ecommerceapp.designsystem.molecules.InfoBannerType
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.EcommerceIconButton
+import com.example.ecommerceapp.core.designsystem.atoms.EcommercePrimaryButton
+import com.example.ecommerceapp.core.designsystem.atoms.EcommerceTextButton
+import com.example.ecommerceapp.core.designsystem.atoms.TitleLarge
+import com.example.ecommerceapp.core.designsystem.molecules.FormField
+import com.example.ecommerceapp.core.designsystem.molecules.InfoBanner
+import com.example.ecommerceapp.core.designsystem.molecules.InfoBannerType
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Login form organism combines multiple molecules to create a complete login experience
@@ -104,7 +104,7 @@ fun LoginForm(
                 )
             )
             
-            Spacer(modifier = Modifier.height(Dimensions.spacing_16))
+            Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_16))
             
             // Password field
             FormField(
@@ -126,21 +126,21 @@ fun LoginForm(
                         contentDescription = if (passwordVisible) "Hide password" else "Show password"
                     )
                 },
-                visualTransformation = if (passwordVisible) 
+                visualTransformation = if (passwordVisible)
                     VisualTransformation.None else PasswordVisualTransformation(),
                 keyboardOptions = KeyboardOptions(
                     keyboardType = KeyboardType.Password,
                     imeAction = ImeAction.Done
                 ),
                 keyboardActions = KeyboardActions(
-                    onDone = { 
+                    onDone = {
                         focusManager.clearFocus()
-                        onLoginClick() 
+                        onLoginClick()
                     }
                 )
             )
             
-            Spacer(modifier = Modifier.height(Dimensions.spacing_8))
+            Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_8))
             
             // Forgot password
             EcommerceTextButton(
@@ -149,7 +149,7 @@ fun LoginForm(
                 modifier = Modifier.padding(vertical = Dimensions.spacing_8)
             )
             
-            Spacer(modifier = Modifier.height(Dimensions.spacing_24))
+            Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_24))
             
             // Login button
             EcommercePrimaryButton(

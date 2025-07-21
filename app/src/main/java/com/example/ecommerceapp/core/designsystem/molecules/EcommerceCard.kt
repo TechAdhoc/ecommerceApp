@@ -1,25 +1,20 @@
-package com.example.ecommerceapp.designsystem.molecules
+package com.example.ecommerceapp.core.designsystem.molecules
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.unit.dp
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.BodyLarge
-import com.example.ecommerceapp.designsystem.atoms.BodyMedium
-import com.example.ecommerceapp.designsystem.atoms.TitleMedium
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.BodyLarge
+import com.example.ecommerceapp.core.designsystem.atoms.BodyMedium
+import com.example.ecommerceapp.core.designsystem.atoms.TitleMedium
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
 
 /**
  * Card component that combines various atoms to create a standard card layout
@@ -42,7 +37,7 @@ fun EcommerceCard(
         enabled = onClick != null
     ) {
         Column(
-            modifier = Modifier.padding(Dimensions.spacing_16)
+            modifier = Modifier.Companion.padding(Dimensions.spacing_16)
         ) {
             TitleMedium(
                 text = title,
@@ -50,7 +45,7 @@ fun EcommerceCard(
             )
             
             if (subtitle != null) {
-                Spacer(modifier = Modifier.height(Dimensions.spacing_4))
+                Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_4))
                 BodyLarge(
                     text = subtitle,
                     modifier = Modifier.fillMaxWidth()
@@ -58,7 +53,7 @@ fun EcommerceCard(
             }
             
             if (description != null) {
-                Spacer(modifier = Modifier.height(Dimensions.spacing_8))
+                Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_8))
                 BodyMedium(
                     text = description,
                     modifier = Modifier.fillMaxWidth()
@@ -66,7 +61,7 @@ fun EcommerceCard(
             }
             
             content?.let {
-                Spacer(modifier = Modifier.height(Dimensions.spacing_16))
+                Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_16))
                 it()
             }
         }

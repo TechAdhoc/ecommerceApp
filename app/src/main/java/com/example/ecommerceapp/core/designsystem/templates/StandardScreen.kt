@@ -1,6 +1,5 @@
-package com.example.ecommerceapp.designsystem.templates
+package com.example.ecommerceapp.core.designsystem.templates
 
-import android.content.res.Resources
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,14 +11,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import com.example.ecommerceapp.core.components.Loader
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommerceSurface
-import com.example.ecommerceapp.designsystem.molecules.InfoBanner
-import com.example.ecommerceapp.designsystem.molecules.InfoBannerType
-import com.example.ecommerceapp.designsystem.molecules.LoadingBanner
-import com.example.ecommerceapp.designsystem.organisms.AppTopBar
-import com.example.ecommerceapp.designsystem.organisms.BottomNavItem
-import com.example.ecommerceapp.designsystem.organisms.BottomNavigationBar
+import com.example.ecommerceapp.core.designsystem.molecules.InfoBanner
+import com.example.ecommerceapp.core.designsystem.molecules.InfoBannerType
+import com.example.ecommerceapp.core.designsystem.organisms.AppTopBar
+import com.example.ecommerceapp.core.designsystem.organisms.BottomNavItem
+import com.example.ecommerceapp.core.designsystem.organisms.BottomNavigationBar
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Standard screen template with top app bar and optional bottom navigation
@@ -62,13 +59,13 @@ fun StandardScreen(
         },
         content = { paddingValues ->
             Surface(
-                color = Theme.colorScheme.background,
+                color = Theme.background,
                 modifier = Modifier.fillMaxSize()
             ) {
                 Column {
                     // Show loading or error banners at the top if needed
                     if (isLoading) {
-                        LoadingBanner(message = "Loading...")
+                        InfoBanner(message = "Loading...", type = InfoBannerType.LOADING)
                     }
                     
                     if (errorMessage != null) {

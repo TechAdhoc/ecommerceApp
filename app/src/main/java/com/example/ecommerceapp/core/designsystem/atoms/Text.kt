@@ -1,16 +1,12 @@
-package com.example.ecommerceapp.designsystem.atoms
+package com.example.ecommerceapp.core.designsystem.atoms
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Title text component with standardized styles
@@ -73,7 +69,7 @@ fun BodyLarge(
     Text(
         text = text,
         modifier = modifier,
-        style = Theme.typography.bodyLarge,
+        style = Theme.bodyLarge,
         color = color,
         textAlign = textAlign,
         maxLines = maxLines,
@@ -96,7 +92,7 @@ fun BodyMedium(
     Text(
         text = text,
         modifier = modifier,
-        style = Theme.typography.bodyMedium,
+        style = Theme.bodyMedium,
         color = color,
         textAlign = textAlign,
         maxLines = maxLines,
@@ -111,7 +107,7 @@ fun BodyMedium(
 fun Caption(
     text: String,
     modifier: Modifier = Modifier,
-    color: Color = Theme.colorScheme.onSurface.copy(alpha = 0.7f),
+    color: Color = Theme.onSurface.copy(alpha = 0.7f),
     textAlign: TextAlign? = null,
     maxLines: Int = Int.MAX_VALUE,
     overflow: TextOverflow = TextOverflow.Clip
@@ -119,7 +115,7 @@ fun Caption(
     Text(
         text = text,
         modifier = modifier,
-        style = Theme.typography.bodyMedium,
+        style = Theme.bodyMedium,
         color = color,
         textAlign = textAlign,
         maxLines = maxLines,

@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.util
+package com.example.ecommerceapp.core.designsystem.util
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
@@ -6,11 +6,10 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
-import com.example.ecommerceapp.designsystem.theme.Primary
-import com.example.ecommerceapp.designsystem.theme.PrimaryDark
+import com.example.ecommerceapp.core.designsystem.theme.Primary
+import com.example.ecommerceapp.core.designsystem.theme.PrimaryDark
 import android.app.Activity
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 
 /**
  * Apply status bar color based on the current theme

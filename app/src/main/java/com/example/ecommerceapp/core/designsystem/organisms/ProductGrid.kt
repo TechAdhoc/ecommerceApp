@@ -1,16 +1,13 @@
-package com.example.ecommerceapp.designsystem.organisms
+package com.example.ecommerceapp.core.designsystem.organisms
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -23,16 +20,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.example.ecommerceapp.core.components.ErrorDialog
-import com.example.ecommerceapp.core.components.Loader
+import com.example.ecommerceapp.core.designsystem.atoms.TitleLarge
+import com.example.ecommerceapp.core.designsystem.molecules.ProductItemCard
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
 import com.example.ecommerceapp.core.network.ApiResult
 import com.example.ecommerceapp.data.model.Product
-import com.example.ecommerceapp.designsystem.atoms.TitleLarge
-import com.example.ecommerceapp.designsystem.molecules.InfoBanner
-import com.example.ecommerceapp.designsystem.molecules.InfoBannerType
-import com.example.ecommerceapp.designsystem.molecules.LoadingBanner
-import com.example.ecommerceapp.designsystem.molecules.ProductItemCard
-import com.example.ecommerceapp.designsystem.theme.Dimensions
 
 /**
  * ProductGrid organism for displaying a grid of products
@@ -60,7 +52,7 @@ fun ProductGrid(
                 reviews = product.reviews,
                 onProductClick = { onProductClick(product) },
                 onAddToCartClick = { onAddToCartClick(product) },
-                modifier = Modifier.padding(Dimensions.spacing_8)
+                modifier = Modifier.Companion.padding(Dimensions.spacing_8)
             )
         }
     }

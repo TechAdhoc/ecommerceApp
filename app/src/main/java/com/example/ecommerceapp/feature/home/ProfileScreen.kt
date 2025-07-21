@@ -4,17 +4,14 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.ecommerceapp.core.session.SessionManager
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommercePrimaryButton
-import com.example.ecommerceapp.designsystem.organisms.AppTopBar
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
+import com.example.ecommerceapp.core.designsystem.atoms.EcommercePrimaryButton
+import com.example.ecommerceapp.core.designsystem.organisms.AppTopBar
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
 import com.example.ecommerceapp.feature.auth.viewmodel.AuthViewModel
 
 @Composable

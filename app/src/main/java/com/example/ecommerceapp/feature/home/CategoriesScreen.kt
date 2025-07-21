@@ -6,8 +6,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.organisms.AppTopBar
+import com.example.ecommerceapp.core.designsystem.theme.Theme
+import com.example.ecommerceapp.core.designsystem.organisms.AppTopBar
 
 @Composable
 fun CategoriesScreen(

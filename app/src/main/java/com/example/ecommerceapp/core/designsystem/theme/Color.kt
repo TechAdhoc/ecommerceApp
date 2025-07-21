@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.theme
+package com.example.ecommerceapp.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

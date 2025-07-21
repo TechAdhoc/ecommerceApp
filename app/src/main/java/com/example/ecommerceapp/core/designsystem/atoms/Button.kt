@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.atoms
+package com.example.ecommerceapp.core.designsystem.atoms
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.PaddingValues
@@ -16,8 +16,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
 
 /**
  * Primary button with filled background 

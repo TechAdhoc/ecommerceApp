@@ -101,43 +101,69 @@ The project follows a feature-based package structure, where each feature contai
 ```
 app/
 ├── core/
-│   ├── di/
-│   ├── network/
-│   ├── database/
-│   └── utils/
-├── features/
-│   ├── auth/
-│   │   ├── data/
-│   │   ├── domain/
-│   │   └── presentation/
-│   ├── products/
-│   │   ├── data/
-│   │   ├── domain/
-│   │   └── presentation/
-│   ├── cart/
-│   │   ├── data/
-│   │   ├── domain/
-│   │   └── presentation/
-│   └── checkout/
-│       ├── data/
-│       ├── domain/
-│       └── presentation/
-├── design_system/
-│   ├── atoms/
-│   ├── molecules/
-│   ├── organisms/
-│   └── theme/
-└── utils/
+│   ├── components/     # Reusable UI components
+│   ├── designsystem/   # Atomic Design System components
+│   │   ├── atoms/      # Basic UI components
+│   │   ├── molecules/  # Composite components
+│   │   ├── organisms/  # Complex UI components
+│   │   ├── templates/  # Page layouts
+│   │   └── theme/      # Design tokens and theme
+│   ├── network/        # Network configuration
+│   ├── database/       # Local database setup
+│   ├── di/            # Dependency injection modules
+│   ├── base/          # Base classes and interfaces
+│   ├── common/        # Common utilities and extensions
+│   └── session/       # User session management
+├── data/
+│   ├── repository/    # Repository implementations
+│   ├── remote/        # API service interfaces
+│   ├── local/         # Database operations
+│   └── model/         # Data models and mappers
+├── domain/
+│   ├── model/         # Domain entities
+│   ├── repository/    # Repository interfaces
+│   └── usecase/       # Business logic use cases
+└── feature/
+    ├── auth/          # Authentication screens
+    ├── home/          # Home and product listing screens
+    ├── product/       # Product detail screens
+    ├── cart/          # Shopping cart screens
+    └── checkout/      # Checkout flow screens
+```
+
+## Design System Integration
+
+The design system is now centralized in the core module, making it a foundational part of the application architecture. This organization provides several benefits:
+
+- **Consistent UI/UX**: Ensures visual consistency across all features by centralizing design tokens and components
+- **Improved Maintainability**: Changes to the design system affect the entire app uniformly
+- **Better Developer Experience**: Clear component hierarchy following Atomic Design principles
+- **Enhanced Reusability**: Core UI components can be easily used across different features
+
+### Theme Usage
+
+The Theme object provides direct access to colors, typography, and dimensions:
+
+```kotlin
+// Colors
+Text(color = Theme.primary)
+
+// Typography
+Text(style = Theme.bodyMedium)
+
+// Dimensions
+Spacer(modifier = Modifier.height(Dimensions.spacing_16))
 ```
 
 ## Getting Started
 
-Instructions for setting up and running the project locally...
+To get started with the project, follow these steps:
+
+1. **Clone the repository**: `git clone /ecommerceapp.git`
+2. **Open in Android Studio**: Import the project as an existing Android Studio project.
+3. **Build the project**: Wait for Gradle to sync and build the project.
+4. **Run the app**: Connect a device or start an emulator, then run the app from Android Studio.
 
 ## Contributing
 
-Guidelines for contributing to the project...
-
-## License
-
-License information...
+Pull requests are welcome and help this to make a cool next gen android framework with jetpack compose.

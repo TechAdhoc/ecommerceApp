@@ -11,7 +11,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.style.TextOverflow
-import com.example.ecommerceapp.design.Theme
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Reusable TopAppBar component

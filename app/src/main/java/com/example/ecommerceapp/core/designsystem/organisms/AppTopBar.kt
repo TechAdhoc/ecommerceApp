@@ -1,10 +1,8 @@
-package com.example.ecommerceapp.designsystem.organisms
+package com.example.ecommerceapp.core.designsystem.organisms
 
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -18,11 +16,8 @@ import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommerceIconButton
-import com.example.ecommerceapp.designsystem.atoms.TitleMedium
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.TitleMedium
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Top app bar organism with various configurations
@@ -46,7 +41,7 @@ fun AppTopBar(
         modifier = modifier.fillMaxWidth()
     ) {
         TopAppBar(
-            title = { 
+            title = {
                 TitleMedium(
                     text = title,
                     color = contentColor

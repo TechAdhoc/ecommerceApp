@@ -1,4 +1,4 @@
-package com.example.ecommerceapp.designsystem.molecules
+package com.example.ecommerceapp.core.designsystem.molecules
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -11,9 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.VisualTransformation
-import com.example.ecommerceapp.design.Theme
-import com.example.ecommerceapp.designsystem.atoms.EcommerceTextField
-import com.example.ecommerceapp.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.atoms.EcommerceTextField
+import com.example.ecommerceapp.core.designsystem.theme.Dimensions
+import com.example.ecommerceapp.core.designsystem.theme.Theme
 
 /**
  * Form field molecule that combines a label with a text field
@@ -56,11 +56,11 @@ fun FormField(
         )
         
         if (!isError && helperText != null) {
-            Spacer(modifier = Modifier.height(Dimensions.spacing_4))
+            Spacer(modifier = Modifier.Companion.height(Dimensions.spacing_4))
             Text(
                 text = helperText,
-                style = Theme.typography.bodyMedium,
-                color = Theme.colorScheme.onSurface.copy(alpha = 0.6f),
+                style = Theme.bodyMedium,
+                color = Theme.onSurface.copy(alpha = 0.6f),
                 modifier = Modifier.padding(start = Dimensions.spacing_4)
             )
         }
