@@ -65,8 +65,7 @@ fun SplashScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.alpha(alphaAnimation)
         ) {
-            // Replace R.drawable.app_logo with your actual logo resource
-            // Here we're using a placeholder
+            
             Image(
                 painter = painterResource(id = android.R.drawable.ic_menu_report_image),
                 contentDescription = "App Logo",
